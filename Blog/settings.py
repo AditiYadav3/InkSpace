@@ -26,9 +26,16 @@ SECRET_KEY = 'django-insecure-r0ogy8*hu=^^w4nvyaz(1lkuspx(ju0lmehjl)d1&v%-(h@gjj
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "inkspace-mr8p.onrender.com"
+    "inkspace-mr8p.onrender.com",
+    "localhost",
+    "127.0.0.1"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://inkspace-mr8p.onrender.com"
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
