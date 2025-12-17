@@ -90,7 +90,7 @@ def blog_update(request, slug):
                 if form.is_valid():
                     content = form.cleaned_data['content']
 
-                blog_obj = BlogModel.objects.update(
+                blog_obj = BlogModel.objects.create(
                     user=user, title=title,
                     content=content, image=image
                 )
